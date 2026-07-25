@@ -792,7 +792,7 @@ section[data-screen-label] li[style*="font-size:17px"]{ font-size:18px !importan
         <h2>I quattro contenitori coi tuoi numeri.</h2>
         <p class="t">Qui sotto non c'è un esercizio da consegnare: c'è uno strumento. Cambia i numeri e guarda che cosa succede ai quattro contenitori. Comincia con quelli di Chiara, poi mettici i tuoi - o quelli che pensi di avere fra un anno.</p>
 
-        <div class="sfonda" style="background:#fff;border:1px solid #D9DACF;border-radius:16px;padding:26px 28px;margin:26px auto 0;">
+        <div class="sfonda" data-noprint="1" style="background:#fff;border:1px solid #D9DACF;border-radius:16px;padding:26px 28px;margin:26px auto 0;">
           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;">
             <div>
               <label for="a1-netto" style="display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#827F75;margin-bottom:6px;">Stipendio netto</label>
@@ -1842,7 +1842,7 @@ section[data-screen-label] li[style*="font-size:17px"]{ font-size:18px !importan
         <h2>Il tempo batte il rendimento.</h2>
         <p class="t">Questo è il simulatore del piano di accumulo. Metti quanto versi ogni mese, per quanti anni e a che rendimento: il grafico separa <strong>quanto hai messo tu</strong> da <strong>quanto ha fatto il tempo</strong>. Poi guarda che cosa cambia se cominci a vent'anni invece che a quaranta.</p>
 
-        <div class="sfonda" style="background:#fff;border:1px solid #D9DACF;border-radius:16px;padding:26px 28px;margin:26px auto 0;">
+        <div class="sfonda" data-noprint="1" style="background:#fff;border:1px solid #D9DACF;border-radius:16px;padding:26px 28px;margin:26px auto 0;">
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px;">
             <div>
               <label for="a2-rata" style="display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#827F75;margin-bottom:6px;">Verso ogni mese</label>
@@ -3077,7 +3077,7 @@ function collectBlocks() {
   document.querySelectorAll('#p-lez section[data-screen-label]').forEach(function (sec) { pWalk(sec, blocchi); });
   if (printScope === 'app') {
     blocchi.push({ t: 'h1', html: 'Approfondimenti' });
-    document.querySelectorAll('#p-app article').forEach(function (art) { pWalk(art, blocchi); });
+    document.querySelectorAll('#p-app article, #p-app section[data-screen-label]').forEach(function (art) { pWalk(art, blocchi); });
   }
   return blocchi;
 }
